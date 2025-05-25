@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X UA Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-  <!-- CSS Archivo -->
-  <link rel="stylesheet" href="clone.css"/>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="clone.css" />
   <title>YoutuCloneBe</title>
 </head>
 <body>
-    <header class="header">.</header>
-      <main>
-        <div class="side bar"></div>
-        <div class="content"></div>
-      </main>
-    <header>
-      <div class="logo left">
-        <i id="menu" class="Material-icons"></i>
-        <img src="yt-logo.png">
+  <header class="header">
+    <!-- Aquí puedes agregar contenido adicional si lo deseas -->
+  </header>
+  <main>
+    <aside class="sidebar">
+      <!-- Aquí puedes agregar contenido de la barra lateral -->
+    </aside>
+    <section class="content">
+      <!-- Aquí va el contenido principal -->
+    </section>
+  </main>
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">
+        <img src="yt-logo.png" alt="Logo" height="40" />
       </div>
-      <div class="search center">
-          <form action="">
-            <input type="text" placeholder="Buscar" />
-            <button><i class="Material-icons">Buscar</i></button>
-          </form>
-          <i class="Material-icons mic">mic</i>
-      </div>
-      <div class="icons right">
-        <i class="Material-icons">videocam</i>
-        <i class="Material-icons">apps</i>
-        <i class="Material-icons">notificaciones</i>
-        <i class="Material-icons display-this">account circle</i>
-      </div>
-    </header>
+    </div>
+    <div class="ytSearchboxComponentInputBoxr">
+        <form action="/results" class="ytSearchboxComponentSearchForm">
+        <input name="search_query" aria-controls="i0" aria-expanded="true" type="text" autocomplete="off" autocorrect="off" aria-autocomplete="list" role="combobox" class="ytSearchboxComponentInput yt-searchbox-input title" placeholder="Buscar"></form>
+      <i class="material-icons mic">mic</i>
+    </div>
+    <div class="icons right">
+      <i class="material-icons">videocam</i>
+      <i class="material-icons">apps</i>
+      <i class="material-icons">notifications</i>
+      <i class="material-icons display-this">account_circle</i>
+    </div>
+  </header>
 </body>
 </html>

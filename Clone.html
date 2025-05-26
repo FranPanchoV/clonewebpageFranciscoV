@@ -1,42 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet" href="clone.css" />
-  <title>YoutuCloneBe</title>
-</head>
-<body>
-  <header class="header">
-    <!-- Aquí puedes agregar contenido adicional si lo deseas -->
-  </header>
-  <main>
-    <aside class="sidebar">
-      <!-- Aquí puedes agregar contenido de la barra lateral -->
-    </aside>
-    <section class="content">
-      <!-- Aquí va el contenido principal -->
-    </section>
-  </main>
-  <header class="header">
-    <div class="header-left">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clon de Youtube con HTML y CSS</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <header class="header">
       <div class="logo">
-        <img src="yt-logo.png" alt="Logo" height="40" />
+        <i id="menu" class="material-icons">menu</i>
+        <img src="https://www.freecodecamp.org/news/content/images/2022/01/yt-logo.png" alt="Logo de YouTube" />
       </div>
-    </div>
-    <div class="ytSearchboxComponentInputBoxr">
-        <form action="/results" class="ytSearchboxComponentSearchForm">
-        <input name="search_query" aria-controls="i0" aria-expanded="true" type="text" autocomplete="off" autocorrect="off" aria-autocomplete="list" role="combobox" class="ytSearchboxComponentInput yt-searchbox-input title" placeholder="Buscar"></form>
-      <i class="material-icons mic">mic</i>
-    </div>
-    <div class="icons right">
-      <i class="material-icons">videocam</i>
-      <i class="material-icons">apps</i>
-      <i class="material-icons">notifications</i>
-      <i class="material-icons display-this">account_circle</i>
-    </div>
-  </header>
-</body>
+      <div class="search">
+        <form action="#">
+          <input type="search" placeholder="Buscar" />
+          <button type="submit">
+            <i class="material-icons">search</i>
+          </button>
+        </form>
+        <i class="material-icons mic">mic</i>
+      </div>
+      <div class="icons">
+        <i class="material-icons">videocam</i>
+        <i class="material-icons">apps</i>
+        <i class="material-icons">notifications</i>
+        <i class="material-icons">account_circle</i>
+      </div>
+    </header>
+    <main>
+      <aside class="sidebar">
+        <nav class="nav">
+          <a href="#" class="nav-link active">
+            <i class="material-icons">home</i>
+            <span>Inicio</span>
+          </a>
+          <a href="#" class="nav-link">
+            <i class="material-icons">local_fire_department</i>
+            <span>Tendencias</span>
+          </a>
+          <a href="#" class="nav-link">
+            <i class="material-icons">subscriptions</i>
+            <span>Suscrpciones</span>
+          </a>
+        </nav>
+        <hr />
+        <nav class="nav">
+          <a href="#" class="nav-link">
+            <i class="material-icons">library_add_check</i>
+            <span>Biblioteca</span>
+          </a>
+          <a href="#" class="nav-link">
+            <i class="material-icons">history</i>
+            <span>Historial</span>
+          </a>
+          <a href="#" class="nav-link">
+            <i class="material-icons">play_arrow</i>
+            <span>Tus videos</span>
+          </a>
+          <a href="#" class="nav-link">
+            <i class="material-icons">watch_later</i>
+            <span>Ver más tarde</span>
+          </a>
+          <a href="#" class="nav-link">
+            <i class="material-icons">thumb_up</i>
+            <span>Videos que te gustan</span>
+          </a>
+        </nav>
+      </aside>
+      <div class="content">
+        <div class="videos">
+          <div class="video">
+            <div class="thumbnail">
+              <img
+                src="https://img.youtube.com/vi/zUwB_imVjmg/maxresdefault.jpg"
+                alt="Miniatura del video"
+              />
+            </div>
+            <div class="details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/bpzY-S4DYlbTeOpY5hIA7qz_hcbMkgvLAugtwKBGTTImNnWAGudX0y53bo_fJZ0auypxrWkUiw=s88-c-k-c0x00ffffff-no-rj"
+                  alt="Avatar del autor"/>
+                <p>Título del Video</p>
+                <p>Nombre del Canal</p>
+                <p>Información del video</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

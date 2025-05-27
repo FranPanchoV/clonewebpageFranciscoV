@@ -2,7 +2,7 @@
 
 * {
   margin: 0;
-  padding: 5px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -17,6 +17,7 @@ body {
   align-items: center;
   height: 60px;
   padding: 15px;
+  flex-wrap: nowrap;
 }
 
 main {
@@ -73,9 +74,11 @@ input:focus {
 }
 
 .material-icons {
-  color: rgb(100, 100, 100);
+  color: black;
   padding: 0 7px;
-  cursor: move;
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .nav {
@@ -123,18 +126,20 @@ hr {
   width: 270px;
   margin-bottom: 30px;
   padding: 10px;
-    flex: 1 1 400px; /* Cada video tendrá un ancho mínimo de 300px */
+  flex: 1 1 300px; 
+  margin-bottom: 20px; 
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px; /* Espacio entre los elementos */
+  gap: 20px; 
 }
 
 .thumbnail {
   width: 100%;
   height: 170px;
+  box-sizing: border-box;
 }
 
 .thumbnail img,

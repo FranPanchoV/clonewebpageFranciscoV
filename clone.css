@@ -2,16 +2,15 @@
 
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Añadido para un mejor control de los tamaños */
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f9f9f9; /* Mover el color de fondo aquí para aplicar desde el inicio */
+  background-color: #f9f9f9;
 }
 
-/* Header Section */
 .header {
   display: flex;
   justify-content: space-between;
@@ -20,30 +19,24 @@ body {
   padding: 15px;
 }
 
-/* Main Section */
 main {
+  min-height: calc(100vh - 70px);
   display: flex;
-  width: 100%;
-  height: 100vh;
 }
 
-/* Sidebar */
-.sidebar {
-  width: 100px;
-  background-color: #f5f5f5;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.side-bar {
+  height: 100%;
+  width: 17%;
+  background-color: white;
+  overflow-y: auto;
 }
-      
+
 @media (max-width: 768px) {
   .side-bar {
-    display: none; /* Ocultar sidebar en pantallas pequeñas */
+    display: none;
   }
 }
 
-/* Search Section */
 .search {
   display: flex;
 }
@@ -51,11 +44,12 @@ main {
 .search form {
   display: flex;
   border: 1px solid #ddd;
-  height: 45px;
+  height: 30px;
+  border-radius: 5px;
 }
 
 .search input {
-  flex: 1; /* Hacer el input flexible para ocupar el espacio disponible */
+  flex: 1;
   padding: 10px;
   border: 0;
   border-radius: 2px 0 0 2px;
@@ -63,14 +57,14 @@ main {
 
 input:focus {
   outline: none;
-  border: 1px solid #ddd; /* Mantener el mismo estilo al enfocar */
+  border: 1px solid #ddd;
 }
 
 .search button {
   height: 100%;
   width: 60px;
   border: none;
-  background-color: transparent; /* Añadir un fondo transparente para un mejor estilo */
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -81,25 +75,20 @@ input:focus {
 .material-icons {
   color: rgb(100, 100, 100);
   padding: 0 7px;
-  cursor: pointer;
-  margin-right: 10px;
+  cursor: move;
 }
 
-/* Navigation */
 .nav {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  margin: 0 0 5px;
 }
 
-nav-link {
+.nav-link {
   display: flex;
   align-items: center;
-  padding: 10px;
-  text-decoration: none;
-  color: #333;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+  padding: 12px 25px;
 }
 
 .nav-link span {
@@ -111,66 +100,55 @@ nav-link {
   background: #e5e5e5;
 }
 
-/* Divider */
 hr {
   height: 1px;
   background-color: #e5e5e5;
   border: none;
 }
 
-/* Content Area */
 .content {
-  flex-grow: 1;
-  padding: 20px;
-  background-color: #f9f9f9; /* Puede ser redundante dado que ya se asignó al body */
   width: 100%;
   padding: 15px;
   border-top: 1px solid #ddd;
-  overflow-y: auto; /* Cambiar a auto para un mejor control del desbordamiento */
-  flex-direction: column;
-  align-items: flex-end;
+  overflow-y: auto;
 }
 
-
-/* Video Section */
 .videos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .video {
   width: 270px;
   margin-bottom: 30px;
-  align-items: flex-end;
+  padding: 10px;
+    flex: 1 1 400px; /* Cada video tendrá un ancho mínimo de 300px */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px; /* Espacio entre los elementos */
 }
 
 .thumbnail {
   width: 100%;
   height: 170px;
-  margin-bottom: 10px;
 }
 
 .thumbnail img,
 .author img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .author img {
-  border-radius: 50%;
+  border-radius: 60%;
   height: 40px;
   width: 40px;
   margin-right: 10px;
 }
 
-.details {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px; /* Espaciado entre detalles */
-  }
-
-/* Title Styles */
 .title {
   display: flex;
   flex-direction: column;
@@ -178,7 +156,7 @@ hr {
 
 .title h3 {
   color: rgb(3, 3, 3);
-  line-height: 1.5; /* Mejorar la legibilidad */
+  line-height: 1.5;
   font-size: 14px;
   margin-bottom: 6px;
 }
@@ -190,20 +168,9 @@ span {
   font-size: 12px;
 }
 
-img {
-  border-radius: 50%; /* Hace que las imágenes de avatar sean redondas */
-  margin-right: 10px; /* Espaciado entre avatar y otros detalles */
-}
-
 /* Responsive Styles */
-@media (max-width: 768px) {
-  .search {
-    display: none; /* Ocultar búsqueda en pantallas pequeñas */
-  }
-}
-
-@media (max-width: 900px) {
-  .search input {
-    width: 100%; /* Hacer el input ocupen todo el ancho disponible */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
   }
 }

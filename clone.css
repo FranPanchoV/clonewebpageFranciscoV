@@ -1,181 +1,176 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
   background-color: #f9f9f9;
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  padding: 15px;
-  flex-wrap: nowrap;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-main {
-  min-height: calc(100vh - 70px);
+.logo {
   display: flex;
+  align-items: center;
 }
 
-.side-bar {
-  height: 100%;
-  width: 17%;
-  background-color: white;
-  overflow-y: auto;
-}
-
-@media (max-width: 768px) {
-  .side-bar {
-    display: none;
-  }
+.logo img {
+  height: 30px;
+  margin-left: 10px;
 }
 
 .search {
   display: flex;
+  align-items: center;
 }
 
 .search form {
   display: flex;
-  border: 1px solid #ddd;
-  height: 30px;
-  border-radius: 5px;
+  align-items: center;
 }
 
 .search input {
-  flex: 1;
-  padding: 10px;
-  border: 0;
-  border-radius: 2px 0 0 2px;
-}
-
-input:focus {
-  outline: none;
-  border: 1px solid #ddd;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 400px;
 }
 
 .search button {
-  height: 100%;
-  width: 60px;
+  background: none;
   border: none;
-  background-color: transparent;
   cursor: pointer;
 }
 
-.mic {
-  margin-top: 10px;
+.icons {
+  display: flex;
+  align-items: center;
 }
 
-.material-icons {
-  color: black;
-  padding: 0 7px;
+.icons i {
+  margin-left: 20px;
   cursor: pointer;
-  background-color: transparent;
-  text-decoration: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 200px;
+  height: calc(100vh - 60px);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .nav {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0 0 5px;
 }
 
 .nav-link {
   display: flex;
   align-items: center;
-  padding: 12px 25px;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
 }
 
-.nav-link span {
-  margin-left: 15px;
+.nav-link i {
+  margin-right: 10px;
 }
 
-.nav-link:hover,
-.active {
-  background: #e5e5e5;
-}
-
-hr {
-  height: 1px;
-  background-color: #e5e5e5;
-  border: none;
+.nav-link.active {
+  background-color: #f0f0f0;
+  border-radius: 5px;
 }
 
 .content {
-  width: 100%;
-  padding: 15px;
-  border-top: 1px solid #ddd;
-  overflow-y: auto;
+  margin-left: 220px;
+  margin-top: 80px;
+  padding: 20px;
 }
 
 .videos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 20px;
 }
 
 .video {
-  width: 270px;
-  margin-bottom: 30px;
-  padding: 10px;
-  flex: 1 1 300px; 
-  margin-bottom: 20px; 
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin-bottom: 20px;
 }
 
 .thumbnail {
   width: 100%;
-  height: 170px;
-  box-sizing: border-box;
 }
 
-.thumbnail img,
-.author img {
-  object-fit: contain;
+.thumbnail iframe {
+  width: 100%;
+  height: 200px;
 }
 
-.author img {
-  border-radius: 60%;
-  height: 40px;
-  width: 40px;
-  margin-right: 10px;
+.video-title {
+  margin-top: 10px;
+  text-align: center;
 }
 
-.title {
-  display: flex;
-  flex-direction: column;
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
-.title h3 {
-  color: rgb(3, 3, 3);
-  line-height: 1.5;
-  font-size: 14px;
-  margin-bottom: 6px;
+.img img {
+    width: 300px;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.title a,
-span {
-  text-decoration: none;
-  color: rgb(96, 96, 96);
-  font-size: 12px;
+.img img:hover {
+    transform: scale(1.05);
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .container {
-    flex-direction: column;
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .search input {
+    width: 200px;
+  }
+
+  .icons i {
+    margin-left: 10px;
   }
 }
+

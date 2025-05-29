@@ -3,70 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YoutucloneBe/HTML#CSS</title>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="clone.css"/>
+    <title>YouTube Clone</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="clone.css" />
   </head>
   <body>
     <header class="header">
       <div class="logo">
-        <i id="menu" class="material-icons">menu</i>
+        <i id="menu" class="material-icons" aria-label="Menú">menu</i>
         <img src="yt-logo.png" alt="Logo de YouTube" />
       </div>
       <div class="search">
-        <form action="#">
-          <input type="search" placeholder="Buscar" />
-          <button type="submit">
+        <form action="#" method="get">
+          <input type="search" placeholder="Buscar" aria-label="Buscar" />
+          <button type="submit" aria-label="Buscar">
             <i class="material-icons">search</i>
           </button>
         </form>
-        <i class="material-icons mic">mic</i>
+        <i class="material-icons mic" aria-label="Micrófono">mic</i>
       </div>
       <div class="icons">
-        <i class="material-icons">videocam</i>
-        <i class="material-icons">apps</i>
-        <i class="material-icons">notifications</i>
-        <i class="material-icons">account_circle</i>
+        <i class="material-icons" aria-label="Crear">videocam</i>
+        <i class="material-icons" aria-label="Aplicaciones">apps</i>
+        <i class="material-icons" aria-label="Notificaciones">notifications</i>
+        <i class="material-icons" aria-label="Cuenta">account_circle</i>
       </div>
     </header>
     <main>
       <aside class="sidebar">
         <nav class="nav">
-          <a href="#" class="nav-link active">
+          <a href="#" class="nav-link active" aria-label="Inicio">
             <i class="material-icons">home</i>
             <span>Inicio</span>
           </a>
-          <a href="#" class="nav-link">
+          <a href="#" class="nav-link" aria-label="Tendencias">
             <i class="material-icons">local_fire_department</i>
             <span>Tendencias</span>
           </a>
-          <a href="#" class="nav-link">
+          <a href="#" class="nav-link" aria-label="Suscripciones">
             <i class="material-icons">subscriptions</i>
-            <span>Suscrpciones</span>
+            <span>Suscripciones</span>
           </a>
         </nav>
         <hr />
         <nav class="nav">
-          <a href="#" class="nav-link">
+          <a href="#" class="nav-link" aria-label="Biblioteca">
             <i class="material-icons">library_add_check</i>
             <span>Biblioteca</span>
           </a>
-          <a href="#" class="nav-link">
+          <a href="#" class="nav-link" aria-label="Historial">
             <i class="material-icons">history</i>
             <span>Historial</span>
           </a>
-          <a href="#" class="nav-link">
+          <a href="#" class="nav-link" aria-label="Tus videos">
             <i class="material-icons">play_arrow</i>
             <span>Tus videos</span>
           </a>
-          <a href="#" class="nav-link">
+          <a href="#" class="nav-link" aria-label="Ver más tarde">
             <i class="material-icons">watch_later</i>
             <span>Ver más tarde</span>
           </a>
-          <a href="#" class="nav-link">
+          <a href="#" class="nav-link" aria-label="Videos que te gustan">
             <i class="material-icons">thumb_up</i>
             <span>Videos que te gustan</span>
           </a>
@@ -77,57 +74,74 @@
           <div class="video">
             <div class="thumbnail">
               <iframe
-                width="300"
-                height="200"
+                width="200"
+                height="100"
                 src="https://www.youtube.com/embed/kDAJLpOZkuI"
                 title="RONALD ACUÑA JR.| ESPN BEISBOL"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-                <h3 class="video-title">RONALD ACUÑA JR.| ESPN BEISBOL</h3>
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <small class="video-title">RONALD ACUÑA JR. | ESPN BEISBOL</small>
             </div>
           </div>
           <div class="video">
             <div class="thumbnail">
               <iframe
-                width="300"
-                height="200"
+                width="200"
+                height="100"
                 src="https://www.youtube.com/embed/D4mOxTVQcv8"
                 title="JUAN SOTO | ESPN BEISBOL"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
+              <small class="video-title">JUAN SOTO | ESPN BEISBOL</small>
             </div>
           </div>
           <div class="video">
             <div class="thumbnail">
               <iframe
-                width="300"
-                height="200"
+                width="200"
+                height="100"
                 src="https://www.youtube.com/embed/4-6U2xCDWmE"
-                title="Pasta a la marinera, querras mas de un plato"
+                title="Pasta a la marinera, querrás más de un plato"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
+              <small class="video-title">Pasta a la marinera</small>
             </div>
           </div>
           <div class="video">
             <div class="thumbnail">
               <iframe
-                width="300"
-                height="200"
+                width="200"
+                height="100"
                 src="https://www.youtube.com/embed/mmohIB1qwek"
                 title="¡Nunca había comido tan rico! Pasta con camarones! ¡Rápido, fácil e increíblemente delicioso!"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
+              <small class="video-title">¡Pasta con camarones! ¡Rápido, fácil!</small>
+            </div>
+          </div>
+          <div class="video">
+            <div class="thumbnail">
+              <iframe
+                width="200"
+                height="100"
+                src="https://www.youtube.com/embed/YBnMRLyp1OM"
+                title="Entrenamiento cardiovascular HIIT de 30 minutos (acondicionamiento corporal completo)"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <small class="video-title">Entrenamiento Cardiovascular - HIT 30 Min</small>
+              <div class="img">
+                <img src="hq720.avif" alt="curso" width="200" title="preparate" />
+              </div>
             </div>
           </div>
         </div>

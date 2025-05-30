@@ -19,10 +19,10 @@ main {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 80px; /* Aumenta la altura del encabezado para acomodar el campo de búsqueda */
   background-color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centra el contenido del encabezado */
   align-items: center;
   padding: 0 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -32,6 +32,8 @@ main {
 .logo {
   display: flex;
   align-items: center;
+  position: absolute;
+  left: 20px;
 }
 
 .logo img {
@@ -42,19 +44,24 @@ main {
 .search {
   display: flex;
   align-items: center;
+  justify-content: center; /* Centra el formulario de búsqueda */
+  width: 100%;
 }
 
 .search form {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .search input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 20px;
-  width: 100%;
-  max-width: 400px;
+  width: 536px; /* Establece el ancho del campo de búsqueda */
+  height: 40px; /* Establece la altura del campo de búsqueda */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
 .search button {
@@ -66,6 +73,8 @@ main {
 .icons {
   display: flex;
   align-items: center;
+  position: absolute;
+  right: 20px;
 }
 
 .icons i {
@@ -75,9 +84,9 @@ main {
 
 .sidebar {
   position: sticky;
-  top: 60px;
+  top: 80px; /* Ajusta el top del sidebar para que sea igual a la altura del header */
   width: 200px;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 80px); /* Ajusta la altura del sidebar */
   background-color: #fff;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -168,6 +177,7 @@ main {
 
   .search input {
     width: 100%;
+    max-width: 400px;
   }
 
   .icons i {

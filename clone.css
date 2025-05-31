@@ -10,10 +10,9 @@ body {
 main {
   display: grid;
   grid-template-columns: 80px 1fr;
-  gap: 0;
-  padding: 0;
   height: 100vh;
-  overflow-y: hidden; 
+  margin: 0;
+  overflow: hidden;
 }
 
 .header {
@@ -37,7 +36,7 @@ main {
 }
 
 .logo img {
-  height: 20px;
+  height: 40px;
 }
 
 .search {
@@ -84,7 +83,7 @@ main {
   position: sticky;
   top: 0;
   width: 80px;
-  height: 100vh;
+  height: calc(100vh - 50px);
   background-color: white;
   padding: 12px 0;
   box-shadow: none;
@@ -121,6 +120,7 @@ main {
   box-sizing: border-box;
   overflow-y: auto; 
   height: calc(100vh - 50px); 
+  overflow-y: auto;
 }
 
 .videos {
